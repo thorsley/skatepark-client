@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
     Card, CardText, CardBody, CardTitle, CardSubtitle,Button,Input,Col,Row,Form,Label
 }from 'reactstrap';
-
+import APIURL from '../helpers/environment'
 const UserParks = (props) =>{
     const [name,setName]=useState('');
     const [location,setLocation]=useState('');
@@ -12,7 +12,7 @@ const UserParks = (props) =>{
 
     const handleSubmit = (e) => { 
         e.preventDefault();
-        fetch('http://localhost:3001/created/parks',{
+        fetch(`$(APIURL)/created/parks`,{
             method: 'POST',
             body: JSON.stringify({nameOfPark:name, locationOfPark:location,hoursOfPark:hours,ratingOfPark:rating,commentsOfPark:comments}),
             headers: new Headers({

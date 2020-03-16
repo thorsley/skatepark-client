@@ -11,7 +11,7 @@ import SkateDropdown from './Skatepark-dropdown';
 import UserParks from './UserSkateparks';
 import CreatedParkTable from './Createdparkcard';
 import SkateparkEdits from './SkateparkEdit'
-
+import APIURL from '../helpers/environment'
 
 
 
@@ -21,7 +21,7 @@ const SkateparkIndex = (props) =>{
     const [updateActive, setUpdateActive]=useState(false);
     const [skateparkToUpdate,setSkateparkToUpdate]= useState({});
     const fetchuserParks = () =>{
-        fetch('http://localhost:3001/created/parks', {
+        fetch(`$(APIURL)/created/parks`, {
             method:'GET',
             headers: new Headers ({
                 'Content-Type':'application/json',

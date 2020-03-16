@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody} from 'reactstrap';
-
+import APIURL from '../helpers/environment'
 const SkateparkEdit =(props)=> {
     const [editName,setEditName]=useState(props.skateparkToUpdate.nameOfPark);
     const [editLocation,setEditLocation]=useState(props.skateparkToUpdate.locationOfPark);
@@ -10,7 +10,7 @@ const SkateparkEdit =(props)=> {
     const skateparkUpdates =(event, skatepark)=>{
     event.preventDefault();
     
-    fetch(`http://localhost:3001/created/parks/${props.skateparkToUpdate.id}`,{
+    fetch(`$(APIURL)/created/parks/${props.skateparkToUpdate.id}`,{
         method:'PUT',
         body: JSON.stringify({ nameOfPark:editName, locationOfPark:editLocation, hoursOfPark:editHours, ratingOfPark:editRating , commentsOfPark:editComments}),
         

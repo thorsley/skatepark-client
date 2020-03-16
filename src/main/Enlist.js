@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Form, FormGroup,Label ,Input, Button} from 'reactstrap';
-
+import APIURL from '../helpers/environment'
 // components for signing up for website.
 const Enlist = (props) =>{
 const [firstName, setFirstName] = useState('');
@@ -9,7 +9,7 @@ const [email, setEmail]=useState('');
 const [password, setPassword]=useState('');
 const handleSubmit = (event)=>{
     event.preventDefault();
-    fetch("http://localhost:3001/sign/signup",{
+    fetch(`$(APIURL)/sign/signup`,{
         method: 'POST',
         body: JSON.stringify({user:{firstName:firstName, lastName: lastName, email:email, password:password}}),
         headers: new Headers({

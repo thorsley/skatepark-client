@@ -3,11 +3,12 @@ import {
     Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button,Table,Col
   } from 'reactstrap';
+  import APIURL from '../helpers/environment'
   const CreatedParkTable = (props) =>{
 
     //creates the delete function for the parks 
       const deleteskatePark=(skatepark) =>{
-          fetch(`http://localhost:3001/created/parks/${skatepark.id}`,{
+          fetch(`$(APIURL)/created/parks/${skatepark.id}`,{
               method:'DELETE',
               headers: new Headers({
                   'Content-Type': 'application/json',
