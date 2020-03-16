@@ -11,7 +11,7 @@ const handleSubmit = (event)=>{
     event.preventDefault();
     fetch(`${APIURL}/sign/signup`,{
         method: 'POST',
-        body: JSON.stringify({user:{firstName:firstName, lastName: lastName, email:email, password:password}}),
+        body: JSON.stringify({users:{firstName:firstName, lastName: lastName, email:email, password:password}}),
         headers: new Headers({
             'Content-Type': 'application/json'
         })
@@ -27,7 +27,7 @@ return(
 <Form onSubmit={handleSubmit}>
     <FormGroup>
         <Label htmlFor="firstName"> First Name</Label>
-        <Input onChange={(e)=>setFirstName(e.target.value)} name="firstname"  placeholder="Enter First Name" value={firstName} required="required" />
+        <Input onChange={(e)=>setFirstName(e.target.value)}  placeholder="Enter First Name" name="firstname"  value={firstName} required="required" />
     </FormGroup>
     <FormGroup>
     <Label htmlFor="lastName"> Last Name</Label>
@@ -39,7 +39,7 @@ return(
     </FormGroup>
     <FormGroup>
     <Label htmlFor="password"> Password</Label>
-    <Input onChange={(e) => setPassword(e.target.value)} name="password" value={password}  placeholder="Enter Password"/>
+    <Input onChange={(e) => setPassword(e.target.value)} type="password" name="password" value={password}  placeholder="Enter Password"/>
     </FormGroup>
     <Button type="submit" >Signup</Button>
 </Form>
