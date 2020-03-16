@@ -21,7 +21,7 @@ const SkateparkIndex = (props) =>{
     const [updateActive, setUpdateActive]=useState(false);
     const [skateparkToUpdate,setSkateparkToUpdate]= useState({});
     const fetchuserParks = () =>{
-        fetch(`$(APIURL)/created/parks`, {
+        fetch(`${APIURL}/created/parks`, {
             method:'GET',
             headers: new Headers ({
                 'Content-Type':'application/json',

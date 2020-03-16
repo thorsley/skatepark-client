@@ -8,7 +8,7 @@ import {
 
     //creates the delete function for the parks 
       const deleteskatePark=(skatepark) =>{
-          fetch(`$(APIURL)/created/parks/${skatepark.id}`,{
+          fetch(`${APIURL}/created/parks/${skatepark.id}`,{
               method:'DELETE',
               headers: new Headers({
                   'Content-Type': 'application/json',

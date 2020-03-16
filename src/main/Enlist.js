@@ -9,7 +9,7 @@ const [email, setEmail]=useState('');
 const [password, setPassword]=useState('');
 const handleSubmit = (event)=>{
     event.preventDefault();
-    fetch(`$(APIURL)/sign/signup`,{
+    fetch(`${APIURL}/sign/signup`,{
         method: 'POST',
         body: JSON.stringify({user:{firstName:firstName, lastName: lastName, email:email, password:password}}),
         headers: new Headers({

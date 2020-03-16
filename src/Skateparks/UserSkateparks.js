@@ -12,7 +12,7 @@ const UserParks = (props) =>{
 
     const handleSubmit = (e) => { 
         e.preventDefault();
-        fetch(`$(APIURL)/created/parks`,{
+        fetch(`${APIURL}/created/parks`,{
             method: 'POST',
             body: JSON.stringify({nameOfPark:name, locationOfPark:location,hoursOfPark:hours,ratingOfPark:rating,commentsOfPark:comments}),
             headers: new Headers({

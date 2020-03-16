@@ -10,7 +10,7 @@ const SkateparkEdit =(props)=> {
     const skateparkUpdates =(event, skatepark)=>{
     event.preventDefault();
     
-    fetch(`$(APIURL)/created/parks/${props.skateparkToUpdate.id}`,{
+    fetch(`${APIURL}/created/parks/${props.skateparkToUpdate.id}`,{
         method:'PUT',
         body: JSON.stringify({ nameOfPark:editName, locationOfPark:editLocation, hoursOfPark:editHours, ratingOfPark:editRating , commentsOfPark:editComments}),
         
