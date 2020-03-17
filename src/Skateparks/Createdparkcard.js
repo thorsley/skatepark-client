@@ -39,7 +39,7 @@ import {
                   <CardText>{skatepark.commentsOfPark}</CardText>
                   
                   <CardText>
-                  <Button color="warning" onClick={()=>{props.editUpdateSkatepark(skatepark); props.updateOn()}}>Update</Button>
+                  <Button style={{backgroundColor: '#0f4c75'}} onClick={()=>{props.editUpdateSkatepark(skatepark); props.updateOn()}}>Update</Button>
                                         
                   <Button color="danger" onClick={() => {deleteskatePark(skatepark)}}>Delete </Button>
                   </CardText>

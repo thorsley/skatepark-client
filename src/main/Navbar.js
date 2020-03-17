@@ -4,12 +4,15 @@ Navbar,
 NavbarBrand,
 Badge,
 Nav,
-NavItem,Button
+NavItem,Button,NavLink
 }from 'reactstrap';
 
+
 const Navigate = (props) =>{
+    
+
     return(
-        <Navbar color="faded" light expand="md">
+        <Navbar  style={{backgroundColor: '#393939'}} light expand="md">
             <NavbarBrand>
             <h1><Badge color="secondary">Skatepark</Badge></h1>
             </NavbarBrand>
@@ -17,6 +20,10 @@ const Navigate = (props) =>{
                 <NavItem>
                     <Button onClick={props.clickLogout}>Logout</Button>
                 </NavItem>
+                <br/>
+                <NavItem>
+              <Button href="all/allparks">Park list</Button>
+            </NavItem>
             </Nav>
 
         </Navbar>

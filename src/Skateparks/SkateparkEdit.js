@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import {Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody} from 'reactstrap';
 import APIURL from '../helpers/environment'
+
 const SkateparkEdit =(props)=> {
     const [editName,setEditName]=useState(props.skateparkToUpdate.nameOfPark);
     const [editLocation,setEditLocation]=useState(props.skateparkToUpdate.locationOfPark);
@@ -26,11 +27,11 @@ const SkateparkEdit =(props)=> {
 }
     return(
         <Modal isOpen={true}>
-        <ModalHeader>update spot</ModalHeader>
+        <ModalHeader>Update Spot</ModalHeader>
         <ModalBody>
             <Form onSubmit={skateparkUpdates}>
                 <FormGroup>
-                    <Label htmlFor="nameOfPark">edit Name</Label>
+                    <Label htmlFor="nameOfPark">Edit Name</Label>
                     <Input name="nameOfPark" value ={editName} onChange ={(e)=> setEditName(e.target.value)}/>
                 </FormGroup>
                 <FormGroup>
@@ -38,15 +39,15 @@ const SkateparkEdit =(props)=> {
                     <Input name="locationOfPark" value={editLocation} onChange={(e) => setEditLocation(e.target.value)}/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="hoursOfPark">Edit hours:</Label>
+                    <Label htmlFor="hoursOfPark">Edit Hours:</Label>
                     <Input name="hoursOfPark"value={editHours} onChange={(e) => setEditHours(e.target.value)}/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="ratingOfPark">Edit rating:</Label>
+                    <Label htmlFor="ratingOfPark">Edit Rating:</Label>
                     <Input name="ratingOfPark" value={editRating} onChange={(e) => setEditRating(e.target.value)}/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="commentsOfPark">Edit comments:</Label>
+                    <Label htmlFor="commentsOfPark">Edit Comments:</Label>
                     <Input name="commentsOfPark" value={editComments} onChange={(e) => setEditComments(e.target.value)}/>
                 </FormGroup>
         

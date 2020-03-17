@@ -7,12 +7,12 @@ import {
     Row,
     Col
 } from 'reactstrap';
-import SkateDropdown from './Skatepark-dropdown';
+
 import UserParks from './UserSkateparks';
 import CreatedParkTable from './Createdparkcard';
 import SkateparkEdits from './SkateparkEdit'
 import APIURL from '../helpers/environment'
-
+import styles from './css files/skateindex.css';
 
 
 
@@ -50,9 +50,9 @@ const SkateparkIndex = (props) =>{
     }
 
     return(
-        <div>
+        <div className="backimg">
        <div>
-           {/* <SkateDropdown/> */}
+           {/* <SkateDropdown/>  */}
            <br/>
            <br/>
            <br/>

@@ -6,6 +6,7 @@ import {
     Input,
     Button
 } from 'reactstrap';
+import styles from'./signin.css'
 //import Signup from './Signup';
 import APIURL from '../helpers/environment'
 
@@ -27,18 +28,18 @@ const Signin =(props)=> {
         })
     }
     return(
-        <div>
+        <div >
             <h2>Login</h2>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label htmlFor = "email">Email </Label>
-                    <Input onChange={(e) => setEmail(e.target.value)} name="email"  placeholder="example@example.com" value={email}/>
+                    <Input autoComplete="off" onChange={(e) => setEmail(e.target.value)} name="email"   type="email"placeholder="example@example.com" value={email}/>
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor = "password">Password</Label>
                     <Input onChange={(e)=> setPassword(e.target.value)} type="password" name="password"placeholder="Enter Password"/>
                 </FormGroup>
-                <Button color="warning" type="submit">Login</Button>
+                <Button className="loginbtn"style={{backgroundColor: '#ffd500'}} type="submit">Login</Button>
             </Form>
         </div>
     )

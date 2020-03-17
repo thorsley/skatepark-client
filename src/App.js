@@ -4,6 +4,7 @@ import './App.css';
 import Signup from './main/Signup';
 import SkateparkIndex from './Skateparks/Skatepark-index';
 
+import styles from'./main/signin.css'
 
 function App() {
   const [sessionToken, setSessionToken]=useState('');
@@ -31,6 +32,7 @@ function App() {
     <div>
      <Navigate clickLogout={clearToken}/>
     {protectedViews()}
+  
      
     </div>
   );

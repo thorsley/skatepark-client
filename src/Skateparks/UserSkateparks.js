@@ -37,7 +37,7 @@ const UserParks = (props) =>{
             <Form onSubmit={handleSubmit}>
             <Card className="text-center" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                 <CardBody>
-                    <CardTitle>Add A Spot</CardTitle>
+                    <CardTitle>Add A Skate Spot</CardTitle>
                     <br/>
                     <CardSubtitle>Name</CardSubtitle>
                     <Label htmlFor="nameOfPark"/>
@@ -57,7 +57,7 @@ const UserParks = (props) =>{
                     <Label htmlFor="commentsOfPark"/>
                     <Input name="commentsOfPark" value={comments} onChange={(e) => setComments(e.target.value)}/>
                     <br/>
-                    <Button type="submit" >Create</Button>
+                    <Button style={{backgroundColor: '#ffd500'}} type="submit" >Add</Button>
                 </CardBody>
             </Card>
             </Form>
