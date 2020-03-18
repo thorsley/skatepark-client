@@ -7,14 +7,13 @@ const [firstName, setFirstName] = useState('');
 const [lastName, setlastName]= useState('');
 const [email, setEmail]=useState('');
 const [password, setPassword]=useState('');
-// const [passwordVal, setpasswordVal ] = useState('');
-// const isEnabled=passwordVal.length>0;
+
 
 const handleSubmit = (event)=>{
     event.preventDefault();
     fetch(`${APIURL}/sign/signup`,{
         method: 'POST',
-        body: JSON.stringify({user:{firstName:firstName, lastName: lastName, email:email, password:password}}),
+        body: JSON.stringify({firstName:firstName, lastName: lastName, email:email, password:password}),
         headers: new Headers({
             'Content-Type': 'application/json'
         })

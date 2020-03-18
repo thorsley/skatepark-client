@@ -1,13 +1,14 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {
-    Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button,Table,Col
+    Card, CardText, CardBody,
+   Button,Col
   } from 'reactstrap';
   import APIURL from '../helpers/environment'
+  import styles from './css files/createdparkcard.css'
   const CreatedParkTable = (props) =>{
 
     //creates the delete function for the parks 
-      const deleteskatePark=(skatepark) =>{
+      const deleteskatePark =(skatepark) =>{
           fetch(`${APIURL}/created/parks/${skatepark.id}`,{
               method:'DELETE',
               headers: new Headers({
@@ -15,7 +16,7 @@ import {
                   'Authorization' :props.token
               })
           })
-          .then(() => props.fetchSkatepark())
+          .then(() => props.fetchSkatepark());
         
       }
       //maps over the parks table in pg admin and displays in a table. 
@@ -40,7 +41,8 @@ import {
                   
                   <CardText>
                   <Button style={{backgroundColor: '#0f4c75'}} onClick={()=>{props.editUpdateSkatepark(skatepark); props.updateOn()}}>Update</Button>
-                                        
+                  </CardText>
+                  <CardText>
                   <Button color="danger" onClick={() => {deleteskatePark(skatepark)}}>Delete </Button>
                   </CardText>
             </CardBody>

@@ -3,5 +3,5 @@ import APIURL from '../../helpers/environment'
 
 const AllSkateParks = () => {
     const [AllParks,SetAllParks]
-    fetch(`${APIURL}/all/allparks`
+    fetch(`${APIURL}/all/allparks`,
 }

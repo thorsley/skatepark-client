@@ -20,9 +20,11 @@ const Navigate = (props) =>{
                 <NavItem>
                     <Button onClick={props.clickLogout}>Logout</Button>
                 </NavItem>
-                <br/>
+               <NavItem></NavItem>
+               <NavItem></NavItem>
+               
                 <NavItem>
-              <Button href="all/allparks">Park list</Button>
+              <NavLink href="all/allparks">Park list</NavLink>
             </NavItem>
             </Nav>
 

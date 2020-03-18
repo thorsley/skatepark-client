@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState,  } from 'react';
 import {
-    Card, CardText, CardBody, CardTitle, CardSubtitle,Button,Input,Col,Row,Form,Label
+    Card, CardBody, CardTitle, CardSubtitle,Button,Input,Col,Row,Form,Label
 }from 'reactstrap';
 import APIURL from '../helpers/environment'
+import styles from './css files/userParks.css'
 const UserParks = (props) =>{
     const [name,setName]=useState('');
     const [location,setLocation]=useState('');
@@ -21,7 +22,6 @@ const UserParks = (props) =>{
             })
         }).then((res) => res.json())
         .then((logData)=>{
-             console.log(logData);
             setName('');
             setLocation('');
             setHours('');
@@ -39,25 +39,24 @@ const UserParks = (props) =>{
                 <CardBody>
                     <CardTitle>Add A Skate Spot</CardTitle>
                     <br/>
-                    <CardSubtitle>Name</CardSubtitle>
+                    <CardSubtitle className="names">Name</CardSubtitle>
                     <Label htmlFor="nameOfPark"/>
-                    <Input name="nameOfPark" value={name} onChange={(e) => setName(e.target.value)}/>
+                    <Input autoComplete="off" name="nameOfPark" value={name} onChange={(e) => setName(e.target.value)}/>
                     
-                    <CardSubtitle>Location</CardSubtitle>
+                    <CardSubtitle className="names">Location</CardSubtitle>
                     <Label htmlFor="locationOfPark"/>
-                    <Input name="locationOfPark" value={location} onChange={(e) => setLocation(e.target.value)}/>
-                    
-                    <CardSubtitle>Hours</CardSubtitle>
+                    <Input autoComplete="off" name="locationOfPark" value={location} onChange={(e) => setLocation(e.target.value)}/>
+                    <CardSubtitle className="names">Hours</CardSubtitle>
                     <Label htmlFor="hoursOfPark"/>
-                    <Input name="hoursOfPark" value={hours} onChange={(e) => setHours(e.target.value)}/>
-                    <CardSubtitle>Rating</CardSubtitle>
+                    <Input autoComplete="off" name="hoursOfPark" value={hours} onChange={(e) => setHours(e.target.value)}/>
+                    <CardSubtitle className="names">Rating</CardSubtitle>
                     <Label htmlFor="ratingOfPark"/>
-                    <Input name="ratingOfPark" value={rating} onChange={(e) => setRating(e.target.value)}/>
-                    <CardSubtitle>Comments</CardSubtitle>
+                    <Input autoComplete="off" name="ratingOfPark" value={rating} onChange={(e) => setRating(e.target.value)}/>
+                    <CardSubtitle className="names">Comments</CardSubtitle>
                     <Label htmlFor="commentsOfPark"/>
-                    <Input name="commentsOfPark" value={comments} onChange={(e) => setComments(e.target.value)}/>
+                    <Input autoComplete="off" name="commentsOfPark" value={comments} onChange={(e) => setComments(e.target.value)}/>
                     <br/>
-                    <Button style={{backgroundColor: '#ffd500'}} type="submit" >Add</Button>
+                    <Button  style={{backgroundColor: '#ffd500'}} type="submit" >Add</Button>
                 </CardBody>
             </Card>
             </Form>

@@ -26,33 +26,33 @@ const SkateparkEdit =(props)=> {
     })
 }
     return(
-        <Modal isOpen={true}>
-        <ModalHeader>Update Spot</ModalHeader>
-        <ModalBody>
+        <Modal  isOpen={true}>
+        <ModalHeader  className="names" >Update Spot</ModalHeader>
+        <ModalBody >
             <Form onSubmit={skateparkUpdates}>
                 <FormGroup>
-                    <Label htmlFor="nameOfPark">Edit Name</Label>
-                    <Input name="nameOfPark" value ={editName} onChange ={(e)=> setEditName(e.target.value)}/>
+                    <Label htmlFor="nameOfPark" className="names">Edit Name</Label>
+                    <Input autoComplete="off" name="nameOfPark" value ={editName} onChange ={(e)=> setEditName(e.target.value)}/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="locationOfPark">Edit Locataion:</Label>
-                    <Input name="locationOfPark" value={editLocation} onChange={(e) => setEditLocation(e.target.value)}/>
+                    <Label className="names" htmlFor="locationOfPark">Edit Locataion:</Label>
+                    <Input autoComplete="off" name="locationOfPark" value={editLocation} onChange={(e) => setEditLocation(e.target.value)}/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="hoursOfPark">Edit Hours:</Label>
-                    <Input name="hoursOfPark"value={editHours} onChange={(e) => setEditHours(e.target.value)}/>
+                    <Label className="names" htmlFor="hoursOfPark">Edit Hours:</Label>
+                    <Input autoComplete="off" name="hoursOfPark"value={editHours} onChange={(e) => setEditHours(e.target.value)}/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="ratingOfPark">Edit Rating:</Label>
-                    <Input name="ratingOfPark" value={editRating} onChange={(e) => setEditRating(e.target.value)}/>
+                    <Label className="names" htmlFor="ratingOfPark">Edit Rating:</Label>
+                    <Input autoComplete="off" name="ratingOfPark" value={editRating} onChange={(e) => setEditRating(e.target.value)}/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="commentsOfPark">Edit Comments:</Label>
-                    <Input name="commentsOfPark" value={editComments} onChange={(e) => setEditComments(e.target.value)}/>
+                    <Label className="names" htmlFor="commentsOfPark">Edit Comments:</Label>
+                    <Input autoComplete="off" name="commentsOfPark" value={editComments} onChange={(e) => setEditComments(e.target.value)}/>
                 </FormGroup>
         
                 
-                <Button type="submit">Update</Button>
+                <Button style={{backgroundColor: '#0f4c75'}} type="submit">Update</Button>
             </Form>
         </ModalBody>
     </Modal>

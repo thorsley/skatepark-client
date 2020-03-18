@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {
-    Container, Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter
+    Container, Row, Col, Button, Modal, ModalHeader, ModalBody, 
 }from 'reactstrap';
 
 import Signin from './Signin';

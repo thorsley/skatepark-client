@@ -17,7 +17,7 @@ const Signin =(props)=> {
         event.preventDefault();
         fetch (`${APIURL}/sign/signin`, {
             method: 'POST',
-            body:JSON.stringify({user:{email:email,password:password}}),
+            body:JSON.stringify({email:email,password:password}),
             headers: new Headers({
                 'Content-Type':'applicaion/json'
             })
@@ -39,7 +39,7 @@ const Signin =(props)=> {
                     <Label htmlFor = "password">Password</Label>
                     <Input onChange={(e)=> setPassword(e.target.value)} type="password" name="password"placeholder="Enter Password"/>
                 </FormGroup>
-                <Button className="loginbtn"style={{backgroundColor: '#ffd500'}} type="submit">Login</Button>
+                <Button style={{backgroundColor: '#ffd500'}} type="submit">Login</Button>
             </Form>
         </div>
     )
